@@ -72,16 +72,27 @@ body{
     font-family: var(--plus-jakarts-sans);
     background-color: var(--very-light-grayish-blue);
 }
+
+main {
+  height: 90vh;
+  max-height: 90vh;
+  /* width: 70vw; */
+  /* max-width: 70vw; */
+  padding: 1rem 1.5rem;
+  border-radius: 7px;
+}
 h1 {
     font-weight: 800;
+    font-size: 18px;
 }
 
-p {
+p, button {
     color: var(--dark-grayish-blue);
     font-family: "Plus Jakarta Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight:500;
     font-style: normal;
+    font-size: 14px;
 }
 
 .notifications-container {
@@ -95,6 +106,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 1.5rem;
 }
 
 .notification-top h1 {
@@ -102,11 +114,58 @@ p {
     gap: 9px;
 }
 
-.unread-messages {
+.unread-messages-count {
     color: white;
     background-color: var(--blue);
     padding: 1px .5rem;
-    font-size: 20px;
+    font-size: 12px;
     align-self: center;
     border-radius: 5px;
+}
+
+.notification-top button {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.notification {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 1rem 1rem;
+}
+
+.notification.unread {
+  background-color: var(--very-light-grayish-blue);
+}
+
+.dot {
+  height: 7px;
+  width: 7px;
+  background-color: var(--red);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.notification img {
+  width: 40px;
+  height: 40px;
+}
+
+.profile-name {
+  color: var(--very-dark-blue);
+  font-weight: 800;
+}
+
+.post-name {
+  font-weight: 800;
+}
+.post-time {
+  color: var(--grayish-blue);
+}
+
+.notification-message {
+  display: flex;
+  flex-direction: column;
 }
