@@ -95,11 +95,17 @@ p, button {
     font-size: 14px;
 }
 
+p {
+  font-size: 16px;
+}
+
 .notifications-container {
     /* display: flex;
     margin: 0 auto; */
-    width: 500px;
+    width: 36vw;
+    max-width: 36vw;
     background-color: white;
+    height: 80vh;
 }
 
 .notification-top {
@@ -117,7 +123,7 @@ p, button {
 .unread-messages-count {
     color: white;
     background-color: var(--blue);
-    padding: 1px .5rem;
+    padding: .2rem .5rem;
     font-size: 12px;
     align-self: center;
     border-radius: 5px;
@@ -129,11 +135,16 @@ p, button {
   border: none;
   cursor: pointer;
 }
+
+.notification-body div:not(:last-child){
+  margin-bottom: 8px;
+}
 .notification {
   display: flex;
   align-items: center;
   gap: 15px;
   padding: 1rem 1rem;
+  border-radius: 10px;
 }
 
 .notification.unread {
@@ -149,8 +160,8 @@ p, button {
 }
 
 .notification img {
-  width: 40px;
-  height: 40px;
+  width: 43px;
+  height: 43px;
 }
 
 .profile-name {
@@ -165,7 +176,19 @@ p, button {
   color: var(--grayish-blue);
 }
 
+.group-name {
+  color: var(--blue);
+  font-weight: 800  ;
+}
+
 .notification-message {
   display: flex;
   flex-direction: column;
 }
+
+.private-message {
+  border: 1px solid var(--light-grayish-blue2);
+  padding: .8rem;
+  margin-top: 10px;
+}
+
