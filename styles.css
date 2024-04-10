@@ -136,6 +136,10 @@ p {
   cursor: pointer;
 }
 
+.notification-top button:focus {
+  border: 1px solid var(--blue);
+}
+
 .notification-body div:not(:last-child){
   margin-bottom: 8px;
 }
@@ -162,6 +166,7 @@ p {
 .notification img {
   width: 43px;
   height: 43px;
+  align-self: flex-start;
 }
 
 .profile-name {
@@ -181,14 +186,20 @@ p {
   font-weight: 800  ;
 }
 
-.notification-message {
-  display: flex;
-  flex-direction: column;
-}
-
 .private-message {
   border: 1px solid var(--light-grayish-blue2);
   padding: .8rem;
   margin-top: 10px;
+}
+
+.notification.message {
+  display: flex;
+}
+.notification.message img {
+  align-self: start;
+}
+.picture-preview {
+  margin-left: auto;
+  margin-bottom: auto;
 }
 
